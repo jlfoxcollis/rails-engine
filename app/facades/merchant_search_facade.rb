@@ -10,8 +10,8 @@ class MerchantSearchFacade
     end
 
     def find_all_merchants(params)
-      if params[:name].present?
-        Merchant.partial_search(params[:name])
+      if params[:name].present? || params[:name] == ""
+        params[:name] == "" ? [] : Merchant.partial_search(params[:name])
       end
     end
 

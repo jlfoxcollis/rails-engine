@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       namespace :merchants do
         resources :find, controller: 'search', only: [:index]
+        resources :find_all, controller: 'search', only: [:index]
+
       end
       resources :merchants, module: :merchants, only: [:index, :show] do 
         resources :items, only: [:index]
