@@ -1,5 +1,4 @@
 class Api::V1::Merchants::MerchantsController < ApplicationController
-  MERCHANTS_SIZE = 20
 
   def index
     page = (params[:page] || 1).to_i
