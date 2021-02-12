@@ -7,4 +7,11 @@ class Merchant < ApplicationRecord
 
   validates_presence_of :name
 
+
+  def self.partial_search(find)
+    key = "%#{find}%".downcase
+
+    where("LOWER(name) like :search", search: key)
+  end
+
 end
