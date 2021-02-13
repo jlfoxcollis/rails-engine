@@ -7,5 +7,4 @@ class Invoice < ApplicationRecord
 
   validates_presence_of :status
 
-  enum status: [:in_progress, :packaged, :shipped, :returned]
 end
