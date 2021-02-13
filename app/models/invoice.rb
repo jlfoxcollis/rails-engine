@@ -7,4 +7,13 @@ class Invoice < ApplicationRecord
 
   validates_presence_of :status
 
+  def self.potential_revenue(quantity)
+    joins(:invoice_items, :transactions)
+      .select('invoices.*, sum(invoice_items.quantity * invoice_items.unit_price) as potential_revenue')
+      .where('invoices.status <> ? AND transactions.result = ?', "shipped", "success")
+      .group(:id)
+      .limit(quantity)
+      .order('potential_revenue DESC')
+  end
+
 end
