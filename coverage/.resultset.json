@@ -184,7 +184,7 @@
           null,
           null,
           1,
-          0,
+          2,
           null,
           null,
           null
@@ -490,6 +490,43 @@
           null
         ]
       },
+      "/Users/james/turing/mod3/rails-engine/app/controllers/api/v1/revenue/weekly_controller.rb": {
+        "lines": [
+          1,
+          null,
+          3,
+          null,
+          2,
+          2,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/james/turing/mod3/rails-engine/app/facades/weekly_facade.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/james/turing/mod3/rails-engine/app/serializers/weekly_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
       "/Users/james/turing/mod3/rails-engine/app/controllers/api/v1/revenue_controller.rb": {
         "lines": [
           1,
@@ -518,6 +555,6 @@
         ]
       }
     },
-    "timestamp": 1613281437
+    "timestamp": 1613281757
   }
 }
