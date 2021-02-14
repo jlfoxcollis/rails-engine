@@ -4,5 +4,4 @@ class WeeklySerializer
     object.week.strftime("%Y-%m-%d")
   end
   attribute :revenue
-
 end
