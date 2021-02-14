@@ -28,7 +28,7 @@ describe 'Merchants API' do
 
     get "/api/v1/merchants/find?name=123"
 
-    expect(response).to be_successful
+    expect(response).to_not be_successful
 
     parsed = JSON.parse(response.body, symbolize_names: true)
 
@@ -46,6 +46,13 @@ describe 'Merchants API' do
 
     expect(response).to be_successful
 
-    parsed = JSON.parse()
+    parsed = JSON.parse(response.body, symbolize_names: true)
+
+    expect(parsed).to have_key(:data)
+    parsed[:data].each do |object|
+      expect(object).to have_key(:attributes)
+      expect(object[:attributes]).to have_key(:name)
+    end
+      
   end
 end

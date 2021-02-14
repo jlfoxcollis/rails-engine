@@ -17,12 +17,7 @@ class Invoice < ApplicationRecord
     end
 
     def weekly_revenue(params)
-      joins(:invoice_items, :transactions)
-      .select("date_trunc('week', invoices.updated_at::date) AS week, sum(invoice_items.quantity * invoice_items.unit_price) AS revenue")
-      .where('transactions.result = ? AND invoices.status = ?', "success", "shipped")
-      .group('week')
-      .order('week')
-      .limit(params)
+      joins(:invoice_items, :transactions).select("date_trunc('week', invoices.updated_at::date) AS week, sum(invoice_items.quantity * invoice_items.unit_price) AS revenue").where('transactions.result = ? AND invoices.status = ?', "success", "shipped").group('week').order('week').limit(params)
     end
   end
 end
