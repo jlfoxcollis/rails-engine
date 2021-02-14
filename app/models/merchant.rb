@@ -25,4 +25,10 @@ class Merchant < ApplicationRecord
     .order('count desc')
     .group(:id)
   end
+
+  def self.revenue_by_range(start_date, end_date)
+    joins(invoices: [:invoice_items, :transactions])
+    .where('transactions.result = ? AND invoices.status = ? AND invoices.created_at >= ? AND invoices.created_at < ?', "success", "shipped", start_date, end_date)
+    .sum('invoice_items.quantity * invoice_items.unit_price').round(2)
+  end
 end
