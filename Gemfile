@@ -19,6 +19,7 @@ group :development, :test do
   gem "awesome_print", :require => "ap"
   gem "factory_bot_rails"
   gem "faker"
+  gem "hirb"
 end
 
 group :development do
