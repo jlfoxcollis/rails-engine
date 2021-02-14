@@ -19,7 +19,7 @@
           null,
           null,
           null,
-          0,
+          3,
           null,
           null,
           1,
@@ -65,7 +65,7 @@
           null,
           null,
           1,
-          0,
+          2,
           null,
           null
         ]
@@ -180,7 +180,7 @@
           null,
           null,
           null,
-          0,
+          2,
           null,
           null,
           1,
@@ -358,6 +358,138 @@
           null
         ]
       },
+      "/Users/james/turing/mod3/rails-engine/app/controllers/api/v1/revenue/items_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          2,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/james/turing/mod3/rails-engine/app/facades/revenue_items_facade.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/james/turing/mod3/rails-engine/app/serializers/item_revenue_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/james/turing/mod3/rails-engine/app/controllers/api/v1/revenue/merchants_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          2,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          3,
+          null,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/james/turing/mod3/rails-engine/app/facades/revenue_merchants_facade.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/james/turing/mod3/rails-engine/app/serializers/merchant_name_revenue_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/james/turing/mod3/rails-engine/app/serializers/merchant_revenue_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/james/turing/mod3/rails-engine/app/controllers/api/v1/revenue/unshipped_controller.rb": {
+        "lines": [
+          1,
+          null,
+          3,
+          null,
+          2,
+          2,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/james/turing/mod3/rails-engine/app/facades/unshipped_facade.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/james/turing/mod3/rails-engine/app/serializers/unshipped_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/james/turing/mod3/rails-engine/app/controllers/api/v1/revenue_controller.rb": {
         "lines": [
           1,
@@ -386,6 +518,6 @@
         ]
       }
     },
-    "timestamp": 1613279449
+    "timestamp": 1613281437
   }
 }

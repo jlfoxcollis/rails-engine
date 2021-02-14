@@ -1,10 +1,10 @@
 class Api::V1::Revenue::UnshippedController < ApplicationController
 
   def index
-    unshipped = UnshippedFacade.calculate_unshipped(params)
-    if unshipped != nil
+    begin
+      unshipped = UnshippedFacade.calculate_unshipped(params)
       render json: UnshippedSerializer.new(unshipped)
-    else
+    rescue
       render json: {"error" => {}}, status: 400
     end
   end

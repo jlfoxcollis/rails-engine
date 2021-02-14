@@ -11,11 +11,11 @@ class Api::V1::Revenue::MerchantsController < ApplicationController
   end
 
   def show
-    if params
+    begin
       merchant = Merchant.top_revenue(1).find(params[:id])
       render json: MerchantRevenueSerializer.new(merchant)
-    else 
-      render json: {"error" => {}}, status: 400
+    rescue
+      render json: {"error" => {}}, status: 404
     end
   end
 
