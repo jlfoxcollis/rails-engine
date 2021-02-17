@@ -53,6 +53,7 @@ GEM
     awesome_print (1.8.0)
     bootsnap (1.7.2)
       msgpack (~> 1.0)
+    brakeman (5.0.0)
     builder (3.2.4)
     capybara (3.35.3)
       addressable
@@ -223,6 +224,7 @@ DEPENDENCIES
   active_model_serializers
   awesome_print
   bootsnap (>= 1.1.0)
+  brakeman
   capybara
   factory_bot_rails
   faker

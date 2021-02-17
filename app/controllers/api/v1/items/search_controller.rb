@@ -6,7 +6,7 @@ class Api::V1::Items::SearchController < ApplicationController
     if search != nil
       render json: ItemSerializer.new(search)
     else 
-      render json: {"data" => {}}
+      render json: {"data" => {}}, status: 400
     end
   end
 end

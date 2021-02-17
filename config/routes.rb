@@ -12,7 +12,7 @@ Rails.application.routes.draw do
         resources :find_all, controller: 'search', only: [:index]
       end
 
-      resources :merchants, module: :merchants, only: [:index, :show] do 
+      resources :merchants, module: :merchants, only: [:index, :show] do  
         resources :items, only: [:index]
       end
       
@@ -22,6 +22,7 @@ Rails.application.routes.draw do
       end
       
       resources :revenue, only: [:index]
+      
       namespace :revenue do
         resources :merchants, only: [:index, :show]
         resources :items, only: [:index]
