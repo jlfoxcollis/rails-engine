@@ -3,12 +3,10 @@ class Api::V1::Items::SearchController < ApplicationController
   def index
     current_uri = request.env['PATH_INFO']
     search = ItemSearchFacade.search_items(params, current_uri)
-    if search.class == String
-      render json: {"error" => search}, status: 404
-    elsif search != []
+    if search != nil
       render json: ItemSerializer.new(search)
     else 
-      render json: {"data" => {}}
+      render json: {"data" => {}}, status: 400
     end
   end
 end

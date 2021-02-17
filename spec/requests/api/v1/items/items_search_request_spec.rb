@@ -62,6 +62,17 @@ describe 'items search API' do
     end
   end
 
+  it 'returns empty array if search returns nothing' do
+    get "/api/v1/items/find_all?name=HippoStrikefulcantfindthisname"
+
+    expect(response).to be_successful
+
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    
+    expect(parsed[:data]).to be_an(Array)
+    expect(parsed[:data]).to eq([])
+  end
+
   it 'can search by price' do
     get "/api/v1/items/find_all?min_price=2&max_price=7"
 
