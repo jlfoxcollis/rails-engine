@@ -3,7 +3,7 @@ class ApplicationRecord < ActiveRecord::Base
 
   def self.paginate(per_page, page)
     per_page = (per_page || 20).to_i
-    starting = ((page || 1).to_i - 1) * per_page
+    starting = ([page.to_i, 1].max - 1) * per_page
     limit(per_page).offset(starting)
   end
 

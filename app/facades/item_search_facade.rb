@@ -23,7 +23,8 @@ class ItemSearchFacade
 
     def find_one_item(params)
       if params[:name].present?
-        Item.partial_search(params[:name]).order(name: :asc).limit(1).first
+        param = "name"
+        Item.item_search(param, params[:name]).order(name: :asc).limit(1).first
       end
     end
   end
