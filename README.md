@@ -138,7 +138,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 James Fox-Collis - [Linkedin](https://www.linkedin.com/in/james-fox-collis/) - jlfoxcollis@gmail.com
 
-Project Link: [Rails Engine Github Repository](https://github.com/jlfoxcollis/rails-engine)
+Project Link: [Rails Engine Repo](https://github.com/jlfoxcollis/rails-engine)
 
 
 
