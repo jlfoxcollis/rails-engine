@@ -78,6 +78,16 @@ describe 'items API' do
     expect(created_item.merchant).to eq(merchant)
   end
 
+  it 'can sad path not create an item' do
+    headers = {"CONTENT_TYPE" => "application/json"}
+    post "/api/v1/items?name=Shampoo&description=ShouldFail&unit_price=23.55", headers: headers
+    expect(response).to be_successful
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    expect(parsed).to have_key(:error)
+    expect(parsed[:error]).to be_a(String)
+    expect(parsed[:error]).to eq("param is missing or the value is empty: item")
+  end
+
   it 'can update an item' do
     merchant = create(:merchant)
     item = create(:item, merchant: merchant)
