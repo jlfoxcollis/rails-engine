@@ -110,23 +110,35 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Rails Engine is a backend API built to support Merchants tracking their inventory and revenue statistics.
+
+Utilizing our JSON endpoints, a merchant can request:
+* potential revenue by invoices.
+* all revenue by date range.
+* weekly revenue figures.
+* Items with most revenue.
+
+From a Business Intelligence standpoint, as this is public, any visitor can request:
+* Total revenue between start/end date ranges.
+* Revenue of a specific merchant.
+* Weekly Revenue of all Merchants.
+* Merchants with highest Revenue.
+* Merchants who sold the most items.
+* able to see all / one merchant.
+* able to see all/ one item, and can create, update, and remove items.
+* search for merchants and items that match a partial name.
+
+<a href="erd.pdf">
+
 
 _For more examples, please refer to the [Documentation](https://example.com)_
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+James Fox-Collis - [Linkedin](https://www.linkedin.com/in/james-fox-collis/) - jlfoxcollis@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [Rails Engine Github Repository](https://github.com/jlfoxcollis/rails-engine)
 
 
 
@@ -143,11 +155,8 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 * [Sticky Kit](http://leafo.net/sticky-kit)
 * [JVectorMap](http://jvectormap.com)
 * [Font Awesome](https://fontawesome.com)
-<p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-</p>
+* [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+
 
 
 
