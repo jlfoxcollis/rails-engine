@@ -7,16 +7,6 @@ class Merchant < ApplicationRecord
 
   validates_presence_of :name
 
-
-  # def self.top_revenue(params)
-  #   Merchant.joins(invoices: [:invoice_items, :transactions])
-  #   .select('merchants.*, sum(invoice_items.quantity * invoice_items.unit_price) AS revenue')
-  #   .where('invoices.status = ? AND transactions.result = ?', "shipped", "success")
-  #   .limit(params)
-  #   .order('revenue desc')
-  #   .group(:id)
-  # end
-
   def self.top_revenue(params)
     joins(invoices: %i[invoice_items transactions])
     .select('merchants.*, sum(invoice_items.quantity * invoice_items.unit_price) AS revenue')
@@ -27,7 +17,7 @@ class Merchant < ApplicationRecord
   end
 
   def self.most_items_sold(params)
-    Merchant.joins(invoices: [:invoice_items, :transactions])
+    joins(invoices: [:invoice_items, :transactions])
     .select('merchants.*, sum(invoice_items.quantity) AS count')
     .where('invoices.status = ? AND transactions.result = ?', "shipped", "success")
     .limit(params)
