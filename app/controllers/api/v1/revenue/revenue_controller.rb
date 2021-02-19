@@ -1,4 +1,4 @@
-class Api::V1::RevenueController < ApplicationController
+class Api::V1::Revenue::RevenueController < ApplicationController
 
   def index
     if params[:start].present? && params[:end].present?

@@ -4,7 +4,6 @@ class Invoice < ApplicationRecord
   has_many :transactions, dependent: :destroy
   has_many :invoice_items, dependent: :destroy
   has_many :items, through: :invoice_items
-
   validates_presence_of :status
   class << self
     def potential_revenue(quantity)
