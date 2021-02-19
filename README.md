@@ -1,6 +1,6 @@
 # About Rails Engine
 
-Rails Engine is a Ruby on Rails API built from scratch.  Modeled after the little-esty-shop web application where statictics for merchants and their sales/items inventory is readily available.  [Little-Esty-Project](https://github.com/turingschool-examples/little-esty-shop)
+Rails Engine is a Ruby on Rails API built from scratch.  Modeled after the little-esty-shop web application where statictics for merchants and their sales/items inventory is readily available.
 
 
 <!-- TABLE OF CONTENTS -->
