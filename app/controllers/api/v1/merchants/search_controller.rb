@@ -8,5 +8,4 @@ class Api::V1::Merchants::SearchController < ApplicationController
       render json: {"data" => {}}, status: 400
     end
   end
-
 end

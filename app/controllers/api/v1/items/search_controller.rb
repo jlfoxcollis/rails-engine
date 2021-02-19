@@ -1,5 +1,4 @@
 class Api::V1::Items::SearchController < ApplicationController
-
   def index
     current_uri = request.env['PATH_INFO']
     if params[:name] && (params[:min_price] || params[:max_price])

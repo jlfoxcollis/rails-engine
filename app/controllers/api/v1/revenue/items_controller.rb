@@ -1,5 +1,4 @@
 class Api::V1::Revenue::ItemsController < ApplicationController
-
   def index
     current_uri = request.env['PATH_INFO']
     items = RevenueItemsFacade.top_revenue(params)

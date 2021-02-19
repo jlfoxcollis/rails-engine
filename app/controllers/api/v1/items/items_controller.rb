@@ -1,5 +1,4 @@
 class Api::V1::Items::ItemsController < ApplicationController
-
   def index
     items = Item.paginate(params[:per_page], params[:page])
     render json: ItemSerializer.new(items)

@@ -1,5 +1,4 @@
 class Api::V1::Revenue::MerchantsController < ApplicationController
-
   def index
     current_uri = request.env['PATH_INFO']
     if params[:quantity] != nil
@@ -18,5 +17,4 @@ class Api::V1::Revenue::MerchantsController < ApplicationController
       render json: {"error" => {}}, status: 404
     end
   end
-
 end
