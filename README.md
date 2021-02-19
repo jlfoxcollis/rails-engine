@@ -50,7 +50,7 @@ Rails Engine is a Ruby on Rails API built from scratch.  Modeled after the littl
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Schema](https://github.com/jlfoxcollis/rails-engine/main/erd.pdf)
 
 Rails Engine is a backend API built to support Merchants tracking their inventory and revenue statistics.
 
