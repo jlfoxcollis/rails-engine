@@ -46,7 +46,11 @@ describe Item do
     it 'item_search' do
       expect(Item.item_search("name", "ana")).to eq([@i1])
       expect(Item.item_search("description", "does")).to eq([@i2])
+    end
 
+    it 'can paginate' do
+
+      expect(Item.paginate(2, 1)).to eq([@i1, @i2])
     end
   end
 end
