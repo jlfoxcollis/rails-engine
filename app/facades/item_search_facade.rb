@@ -1,6 +1,5 @@
 class ItemSearchFacade
   class << self
-
     def search_items(params, path)
       if path.include?("find_all")
         find_items(params)

@@ -19,9 +19,9 @@ describe Item do
       @m1 = create(:merchant)
       @m2 = create(:merchant)
       @m3 = create(:merchant)
-      @i1 = create(:item, merchant: @m1)
-      @i2 = create(:item, merchant: @m2)
-      @i3 = create(:item, merchant: @m3)
+      @i1 = create(:item, merchant: @m1, unit_price: 20.50, name: "bananas")
+      @i2 = create(:item, merchant: @m2, unit_price: 35.50, description: "does this work")
+      @i3 = create(:item, merchant: @m3, unit_price: 5.50)
       @in1 = create(:invoice, merchant: @m1, customer: @c1, status: "shipped")
       @in2 = create(:invoice, merchant: @m2, customer: @c1, status: "shipped")
       @in3 = create(:invoice, merchant: @m3, customer: @c1, status: "shipped")
@@ -41,6 +41,19 @@ describe Item do
 
     it 'top_revenue' do
       expect(Item.top_revenue(10)).to eq([@i3, @i1, @i2])
+    end
+
+    it 'item_search' do
+      expect(Item.item_search("name", "ana")).to eq([@i1])
+      expect(Item.item_search("description", "does")).to eq([@i2])
+    end
+
+    it 'can paginate' do
+      expect(Item.paginate(2, 1)).to eq([@i1, @i2])
+    end
+
+    it 'can price_check' do
+      expect(Item.price_check(5, 10)).to eq([@i3])
     end
   end
 end

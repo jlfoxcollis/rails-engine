@@ -1,6 +1,5 @@
 class MerchantSearchFacade
   class << self
-
     def search_merchants(params, path)
       if path.include?("find_all")
         find_all_merchants(params)
