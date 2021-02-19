@@ -2,9 +2,7 @@ class ItemSearchFacade
   class << self
 
     def search_items(params, path)
-      if params[:name] && (params[:min_price] || params[:max_price])
-        "Can't include both name and price search params"
-      elsif path.include?("find_all")
+      if path.include?("find_all")
         find_items(params)
       elsif path.include?("find") && !path.include?("all")
         find_one_item(params)
