@@ -1,6 +1,5 @@
 class RevenueMerchantsFacade
   class << self
-
     def top_revenue(params)
       page = (params[:page] || 1).to_i
       per_page = (params[:per_page] || 20).to_i
