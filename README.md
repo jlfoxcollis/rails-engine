@@ -56,6 +56,7 @@ From a Business Intelligence standpoint, as this is public, any visitor can requ
 ### Built With
 
 This project was built on the Rails framework and tested with rspec and Brakeman for security vulnerabilities.
+
 * [JQuery](https://jquery.com)
 * [Rails](https://rubyonrails.org/)
 * [Ruby](https://www.ruby-lang.org/en/)
