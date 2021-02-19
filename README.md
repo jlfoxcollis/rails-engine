@@ -101,6 +101,8 @@ This project is currently not deployed with any online platforms.  So in order t
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+*Refer to the root page for endpoints and query parameters
+
 <a href="erd.pdf">
 
 <!-- CONTACT -->
