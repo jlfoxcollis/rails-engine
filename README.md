@@ -55,23 +55,33 @@ Rails Engine is a Ruby on Rails API built from scratch.  Modeled after the littl
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Rails Engine is a backend API built to support Merchants tracking their inventory and revenue statistics.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+Utilizing our JSON endpoints, a merchant can request:
+* potential revenue by invoices.
+* all revenue by date range.
+* weekly revenue figures.
+* Items with most revenue.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
+From a Business Intelligence standpoint, as this is public, any visitor can request:
+* Total revenue between start/end date ranges.
+* Revenue of a specific merchant.
+* Weekly Revenue of all Merchants.
+* Merchants with highest Revenue.
+* Merchants who sold the most items.
+* able to see all / one merchant.
+* able to see all/ one item, and can create, update, and remove items.
+* search for merchants and items that match a partial name.
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
+This project was built on the Rails framework and tested with rspec and Brakeman for security vulnerabilities.
 * [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+* [Rails](https://rubyonrails.org/)
+* [Ruby](https://www.ruby-lang.org/en/)
+* [Brakeman](https://github.com/presidentbeef/brakeman)
 
 
 
@@ -84,7 +94,7 @@ This project is currently not deployed with any online platforms.  So in order t
 
 * Ruby 2.5.3
 * Rails 5.2.4.3
-* 
+* Postgresql (Most recent version)
 
 ### Installation
 
@@ -111,24 +121,6 @@ This project is currently not deployed with any online platforms.  So in order t
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-Rails Engine is a backend API built to support Merchants tracking their inventory and revenue statistics.
-
-Utilizing our JSON endpoints, a merchant can request:
-* potential revenue by invoices.
-* all revenue by date range.
-* weekly revenue figures.
-* Items with most revenue.
-
-From a Business Intelligence standpoint, as this is public, any visitor can request:
-* Total revenue between start/end date ranges.
-* Revenue of a specific merchant.
-* Weekly Revenue of all Merchants.
-* Merchants with highest Revenue.
-* Merchants who sold the most items.
-* able to see all / one merchant.
-* able to see all/ one item, and can create, update, and remove items.
-* search for merchants and items that match a partial name.
 
 <a href="erd.pdf">
 
