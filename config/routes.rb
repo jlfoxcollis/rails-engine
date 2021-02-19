@@ -22,7 +22,7 @@ Rails.application.routes.draw do
         resources :merchant, only: [:index]
       end
       
-      resources :revenue, only: [:index]
+      resources :revenue, controller: "revenue/revenue", only: [:index]
       
       namespace :revenue do
         resources :merchants, only: [:index, :show]

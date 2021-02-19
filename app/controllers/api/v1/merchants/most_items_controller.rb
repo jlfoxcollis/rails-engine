@@ -8,5 +8,4 @@ class Api::V1::Merchants::MostItemsController < ApplicationController
       render json: {"error" => {}}, status: 400
     end
   end
-
 end
