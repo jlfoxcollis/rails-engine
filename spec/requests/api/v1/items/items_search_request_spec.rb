@@ -43,9 +43,12 @@ describe 'items search API' do
 
     get "/api/v1/items/find?name=toonies"
 
-    expect(response).to be_successful
+    expect(response).to_not be_successful
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    expect(parsed).to have_key(:data)
+    expect(parsed[:data]).to be_a(Hash)
+    expect(parsed[:data].keys.count).to eq(0)
 
-    item = JSON.parse(response.body, symbolize_names: true)
   end
 
   it 'sends a item list' do
@@ -106,8 +109,10 @@ describe 'items search API' do
     expect(response).to_not be_successful
 
     items = JSON.parse(response.body, symbolize_names: true)
-
-    expect(items).to have_key(:error)
-    expect(items[:error]).to be_a(String)
+    expect(items).to have_key(:data)
+    expect(items[:data]).to be_a(Hash)
+    expect(items[:data]).to have_key(:error)
+    expect(items[:data][:error]).to be_a(String)
+    expect(items[:data][:error]).to eq("Can't include both name and price search params")
   end
 end
